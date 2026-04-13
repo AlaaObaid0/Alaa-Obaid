@@ -533,6 +533,18 @@
       color: var(--ink);
     }
 
+    .contact-list a {
+      color: var(--accent-deep);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(166, 124, 82, 0.25);
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact-list a:hover {
+      color: var(--ink);
+      border-color: rgba(43, 36, 27, 0.24);
+    }
+
     .contact-form h3 {
       margin: 0 0 8px;
       font-size: 1.5rem;
@@ -969,7 +981,7 @@
               <div><strong>Email:</strong> alaaobaid182@gmail.com</div>
               <div><strong>WhatsApp:</strong> +49 176 23997210</div>
               <div><strong>Best fit:</strong> service businesses, freelancers, consultants, local brands</div>
-              <div><strong>Recommended host:</strong> Netlify for this static site</div>
+              <div><strong>Website:</strong> <a href="https://adsstudio.netlify.app" target="_blank" rel="noreferrer">adsstudio.netlify.app</a></div>
             </div>
             <div class="hero-actions">
               <button class="btn primary" onclick="whatsapp()">Message on WhatsApp</button>
