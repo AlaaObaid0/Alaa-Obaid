@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADS Studio | White and Sand Websites That Convert</title>
+  <meta
+    name="description"
+    content="ADS Studio designs clean white and sand websites, landing pages, and marketing experiences built to turn visitors into real client enquiries."
+  >
+  <meta
+    name="keywords"
+    content="web design, landing pages, marketing website, SEO website, white and sand website, ADS Studio"
+  >
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f6f1e7">
+  <meta property="og:title" content="ADS Studio | White and Sand Websites That Convert">
+  <meta
+    property="og:description"
+    content="Launch-ready websites, portfolio pages, landing pages, SEO setup, and conversion-focused contact flows for modern brands."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ADS Studio | White and Sand Websites That Convert">
+  <meta
+    name="twitter:description"
+    content="Premium websites with a calm white and sand visual system, smoother motion, SEO foundations, and client-ready conversion paths."
+  >
+  <style>
+    :root {
+      --bg: #f6f1e7;
+      --bg-soft: #fbf8f1;
+      --panel: rgba(255, 252, 246, 0.78);
+      --panel-strong: rgba(250, 244, 233, 0.96);
+      --sand: #e8dbc1;
+      --sand-deep: #c9b89a;
+      --ink: #2b241b;
+      --ink-soft: #675a4b;
+      --line: rgba(102, 84, 57, 0.14);
+      --accent: #a67c52;
+      --accent-deep: #835f3b;
+      --shadow: 0 24px 60px rgba(91, 71, 42, 0.12);
+      --shadow-strong: 0 28px 80px rgba(91, 71, 42, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(232, 219, 193, 0.7), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(201, 184, 154, 0.34), transparent 24%),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 45%, #f2eadc 100%);
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: -20%;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    body::before {
+      background:
+        radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.88), transparent 20%),
+        radial-gradient(circle at 78% 22%, rgba(232, 219, 193, 0.7), transparent 18%),
+        radial-gradient(circle at 52% 82%, rgba(201, 184, 154, 0.28), transparent 22%);
+      filter: blur(18px);
+      animation: cloudDrift 18s ease-in-out infinite alternate;
+    }
+
+    body::after {
+      background-image:
+        linear-gradient(rgba(166, 124, 82, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(166, 124, 82, 0.06) 1px, transparent 1px);
+      background-size: 88px 88px;
+      mask-image: radial-gradient(circle at center, black 42%, transparent 85%);
+      opacity: 0.52;
+      animation: gridMove 30s linear infinite;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.12;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(131, 95, 59, 0.18) 0.7px, transparent 1px),
+        radial-gradient(circle at 70% 30%, rgba(131, 95, 59, 0.16) 0.7px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(131, 95, 59, 0.12) 0.7px, transparent 1px);
+      background-size: 160px 160px;
+      animation: grainFloat 16s linear infinite;
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(10px);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .orb-one {
+      top: 8%;
+      left: -80px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(232, 219, 193, 0.7), transparent 68%);
+      animation: floatOne 15s ease-in-out infinite;
+    }
+
+    .orb-two {
+      right: -100px;
+      top: 48%;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.9), transparent 70%);
+      animation: floatTwo 18s ease-in-out infinite;
+    }
+
+    .site-shell {
+      position: relative;
+      isolation: isolate;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px clamp(20px, 4vw, 64px);
+      background: rgba(255, 252, 246, 0.72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(102, 84, 57, 0.08);
+      z-index: 20;
+    }
+
+    .brand {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-deep);
+      transform: translateY(-2px);
+    }
+
+    .hero,
+    .section,
+    .conversion-band,
+    .contact-box,
+    .card,
+    .portfolio-item,
+    .service-card,
+    .contact-form {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: center;
+      min-height: 100vh;
+      padding: 78px clamp(20px, 4vw, 64px) 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(166, 124, 82, 0.18);
+      background: rgba(255, 252, 246, 0.7);
+      color: var(--accent-deep);
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 22px 0 16px;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.93;
+      letter-spacing: -0.05em;
+      max-width: 760px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 620px;
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease, color 0.28s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+      color: #fffaf3;
+      box-shadow: 0 14px 30px rgba(131, 95, 59, 0.2);
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 36px rgba(131, 95, 59, 0.26);
+    }
+
+    .btn.secondary {
+      background: rgba(255, 252, 246, 0.75);
+      color: var(--ink);
+      border: 1px solid rgba(166, 124, 82, 0.2);
+      box-shadow: var(--shadow);
+    }
+
+    .btn.secondary:hover {
+      transform: translateY(-4px);
+      color: var(--accent-deep);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(166, 124, 82, 0.12);
+      background: rgba(255, 255, 255, 0.54);
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent-deep);
+      font-size: 1.3rem;
+    }
+
+    .hero-panel {
+      position: relative;
+      padding: 28px;
+      border-radius: 30px;
+      border: 1px solid rgba(166, 124, 82, 0.14);
+      background: linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(247, 239, 225, 0.92));
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), transparent 42%, rgba(201, 184, 154, 0.18));
+      pointer-events: none;
+    }
+
+    .panel-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .signal {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-deep);
+      font-weight: 700;
+    }
+
+    .signal::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(166, 124, 82, 0.35);
+      animation: pulse 1.8s infinite;
+    }
+
+    .feature-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .feature-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(166, 124, 82, 0.14);
+      background: rgba(255, 255, 255, 0.55);
+      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateX(8px);
+      border-color: rgba(166, 124, 82, 0.26);
+      background: rgba(255, 252, 246, 0.92);
+    }
+
+    .feature-card h3,
+    .service-card h3,
+    .portfolio-item h3,
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.12rem;
+    }
+
+    .feature-card p,
+    .service-card p,
+    .portfolio-item p,
+    .card p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    .section {
+      padding: 36px clamp(20px, 4vw, 64px) 92px;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2.1rem, 5vw, 3.7rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+
+    .conversion-band {
+      margin: 0 clamp(20px, 4vw, 64px) 84px;
+      padding: 22px 24px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      border-radius: 28px;
+      border: 1px solid rgba(166, 124, 82, 0.14);
+      background: rgba(255, 255, 255, 0.56);
+      box-shadow: var(--shadow);
+    }
+
+    .conversion-band div {
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .conversion-band strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .cards,
+    .contact-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-card,
+    .portfolio-item,
+    .card,
+    .contact-form,
+    .contact-box {
+      padding: 28px;
+      border-radius: 28px;
+      border: 1px solid rgba(166, 124, 82, 0.14);
+      background: linear-gradient(180deg, var(--panel), rgba(250, 244, 233, 0.82));
+      box-shadow: var(--shadow);
+    }
+
+    .service-card:hover,
+    .portfolio-item:hover,
+    .card:hover,
+    .contact-form:hover,
+    .contact-box:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-strong);
+      border-color: rgba(166, 124, 82, 0.24);
+    }
+
+    .card-icon,
+    .service-icon,
+    .portfolio-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(166, 124, 82, 0.12);
+      background: rgba(255, 255, 255, 0.68);
+    }
+
+    .service-icon,
+    .card-icon {
+      width: 54px;
+      height: 54px;
+      font-size: 1.35rem;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .portfolio-tag {
+      padding: 10px 14px;
+      color: var(--accent-deep);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-meta {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(166, 124, 82, 0.12);
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-grid {
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: start;
+    }
+
+    .contact-box h3 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .contact-box p {
+      margin: 0 0 16px;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+      color: var(--ink-soft);
+    }
+
+    .contact-list strong {
+      color: var(--ink);
+    }
+
+    .contact-form h3 {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+    }
+
+    .contact-form p {
+      margin: 0 0 20px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid rgba(166, 124, 82, 0.16);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font: inherit;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.85);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: rgba(166, 124, 82, 0.4);
+      box-shadow: 0 0 0 4px rgba(166, 124, 82, 0.08);
+      transform: translateY(-1px);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-note {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #fff7ea, var(--sand));
+      color: var(--accent-deep);
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(131, 95, 59, 0.18);
+      animation: bounceFloat 3.1s ease-in-out infinite;
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 18px 34px rgba(131, 95, 59, 0.24);
+    }
+
+    footer {
+      padding: 30px 20px 40px;
+      text-align: center;
+      color: var(--ink-soft);
+      border-top: 1px solid rgba(166, 124, 82, 0.1);
+    }
+
+    @keyframes cloudDrift {
+      0% {
+        transform: translate3d(-2%, -1%, 0) scale(1);
+      }
+      100% {
+        transform: translate3d(4%, 3%, 0) scale(1.08);
+      }
+    }
+
+    @keyframes gridMove {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+      to {
+        transform: translate3d(-88px, -88px, 0);
+      }
+    }
+
+    @keyframes grainFloat {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(-12px, 10px, 0);
+      }
+      100% {
+        transform: translate3d(8px, -6px, 0);
+      }
+    }
+
+    @keyframes floatOne {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(-24px) translateX(22px);
+      }
+    }
+
+    @keyframes floatTwo {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(18px) translateX(-18px);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.65;
+      }
+    }
+
+    @keyframes bounceFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .hero,
+      .contact-grid,
+      .services-grid,
+      .portfolio-grid,
+      .cards,
+      .conversion-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 62px;
+      }
+
+      .hero-panel {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-stats,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section,
+      .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .conversion-band {
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      .whatsapp {
+        right: 16px;
+        bottom: 16px;
+        width: 56px;
+        height: 56px;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ADS Studio",
+      "description": "ADS Studio creates clean websites, landing pages, and marketing-focused digital experiences for businesses that want more client enquiries.",
+      "email": "alaaobaid182@gmail.com",
+      "telephone": "+49 176 23997210",
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "Website Design",
+        "Landing Page Design",
+        "Marketing Website Development",
+        "SEO Foundations"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <div class="site-shell">
+    <nav>
+      <a class="brand" href="#top">ADS Studio</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div>
+          <div class="eyebrow">White and Sand Digital Design</div>
+          <h1>Launch-ready websites that feel calm, modern, and built to convert.</h1>
+          <p>
+            ADS Studio helps businesses go live with a polished online presence: strong messaging, smooth
+            animation, mobile-friendly layouts, SEO foundations, and a contact flow that turns visitors
+            into real enquiries instead of lost traffic.
+          </p>
+          <div class="hero-actions">
+            <button class="btn primary" onclick="scrollToSection('contact')">Book a Project</button>
+            <button class="btn secondary" onclick="scrollToSection('portfolio')">See Portfolio Style</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>Mobile-Ready</strong>
+              Designed to read clearly and feel smooth on phones, tablets, and desktop.
+            </div>
+            <div class="stat">
+              <strong>SEO Setup</strong>
+              Titles, descriptions, schema, and content structure built in from the start.
+            </div>
+            <div class="stat">
+              <strong>Client-Focused</strong>
+              Clear offers, stronger portfolio presentation, and a form that makes enquiry easy.
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="panel-top">
+            <span>Launch Checklist</span>
+            <span class="signal">Ready for Netlify</span>
+          </div>
+          <div class="feature-stack">
+            <div class="feature-card">
+              <h3>Real Sales Copy</h3>
+              <p>Position your work clearly so visitors quickly understand what you do and why they should trust you.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Hosting and Domain Ready</h3>
+              <p>The site now supports a Netlify contact form and is structured for fast deployment and custom domain connection.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Premium White and Sand System</h3>
+              <p>A softer high-end palette that feels clean, elegant, and professional while keeping subtle motion in the background.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="conversion-band reveal" aria-label="Launch benefits">
+        <div>
+          <strong>Clear positioning</strong>
+          Better wording helps visitors understand your value in seconds.
+        </div>
+        <div>
+          <strong>Better mobile flow</strong>
+          Buttons, cards, and forms stack cleanly on smaller screens.
+        </div>
+        <div>
+          <strong>Faster conversion path</strong>
+          Contact actions are visible throughout the page instead of hidden at the end.
+        </div>
+        <div>
+          <strong>Publishing ready</strong>
+          Structured content and form handling are prepared for live hosting.
+        </div>
+      </section>
+
+      <section class="section reveal" id="services">
+        <div class="section-heading">
+          <h2>Services built around getting you live and getting you clients</h2>
+          <p>
+            This page now works like a real business landing page instead of only a visual concept. The
+            content is organized to explain your offer, show proof of work style, and make taking action feel simple.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">🌐</div>
+            <h3>Website Design and Build</h3>
+            <p>Multi-section websites with strong structure, elegant transitions, and a premium first impression for service businesses.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">🚀</div>
+            <h3>Landing Pages for Campaigns</h3>
+            <p>Focused pages for ads, launches, and lead generation with cleaner messaging and stronger conversion flow.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">🔎</div>
+            <h3>SEO and Launch Setup</h3>
+            <p>Search-ready metadata, schema markup, better content hierarchy, and form handling so the site is ready to publish.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="portfolio">
+        <div class="section-heading">
+          <h2>Portfolio presentation that feels real and easier to sell</h2>
+          <p>
+            These examples are framed as project types and deliverables so the site feels credible without
+            inventing fake client claims. You can swap these for your own finished projects anytime.
+          </p>
+        </div>
+        <div class="portfolio-grid">
+          <article class="portfolio-item reveal">
+            <div class="portfolio-tag">Service Brand Website</div>
+            <h3>Consulting Studio Launch</h3>
+            <p>A clean homepage, offer breakdown, trust-building sections, and a direct enquiry flow designed to win higher-quality leads.</p>
+            <div class="portfolio-meta">
+              Includes: homepage strategy, offer sections, FAQ structure, contact funnel, and mobile optimization.
+            </div>
+          </article>
+          <article class="portfolio-item reveal">
+            <div class="portfolio-tag">Landing Page Build</div>
+            <h3>Campaign-Focused Conversion Page</h3>
+            <p>A fast, single-goal page with stronger headline hierarchy, smoother visuals, and a better path from interest to contact.</p>
+            <div class="portfolio-meta">
+              Includes: ad-ready messaging blocks, CTA flow, social-proof placement, and form capture section.
+            </div>
+          </article>
+          <article class="portfolio-item reveal">
+            <div class="portfolio-tag">Local Business Site</div>
+            <h3>Premium Booking Presence</h3>
+            <p>A white and sand visual system for a local brand that wants to feel more refined, more trustworthy, and easier to contact.</p>
+            <div class="portfolio-meta">
+              Includes: services overview, booking prompts, trust content, contact details, and SEO fundamentals.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="process">
+        <div class="section-heading">
+          <h2>A smoother process from idea to live website</h2>
+          <p>
+            The site now explains what happens next, which helps reduce hesitation for new visitors and makes the business feel more established.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon">1</div>
+            <h3>Discovery</h3>
+            <p>We define your offer, audience, goals, and the exact action you want visitors to take.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">2</div>
+            <h3>Design and Build</h3>
+            <p>Your website is shaped into a responsive experience with motion, structure, and stronger visual clarity.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">3</div>
+            <h3>Launch and Grow</h3>
+            <p>The site goes live with hosting, domain connection, SEO basics, and a form ready to collect leads.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contact">
+        <div class="section-heading">
+          <h2>Ready to turn this website into a client machine?</h2>
+          <p>
+            The contact area is now built to capture proper project details instead of only opening an email app, which gives you a much better chance of getting serious enquiries.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <aside class="contact-box reveal">
+            <h3>Launch support included</h3>
+            <p>
+              This page is prepared for Netlify hosting, custom domain connection, and a built-in form workflow.
+              After publishing, visitors can send project enquiries directly from the website.
+            </p>
+            <div class="contact-list">
+              <div><strong>Email:</strong> alaaobaid182@gmail.com</div>
+              <div><strong>WhatsApp:</strong> +49 176 23997210</div>
+              <div><strong>Best fit:</strong> service businesses, freelancers, consultants, local brands</div>
+              <div><strong>Recommended host:</strong> Netlify for this static site</div>
+            </div>
+            <div class="hero-actions">
+              <button class="btn primary" onclick="whatsapp()">Message on WhatsApp</button>
+              <button class="btn secondary" onclick="contact()">Email Directly</button>
+            </div>
+          </aside>
+
+          <div class="contact-form reveal">
+            <h3>Start your project enquiry</h3>
+            <p>Once deployed on Netlify, this form can collect messages from real visitors without extra JavaScript.</p>
+            <form
+              name="project-enquiry"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="project-enquiry">
+              <p hidden>
+                <label>Do not fill this out if you are human: <input name="bot-field"></label>
+              </p>
+              <div class="form-row">
+                <label>
+                  Name
+                  <input type="text" name="name" placeholder="Your name" required>
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="your@email.com" required>
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  Business
+                  <input type="text" name="business" placeholder="Business or brand name">
+                </label>
+                <label>
+                  Project Type
+                  <select name="project-type" required>
+                    <option value="">Select one</option>
+                    <option>Business Website</option>
+                    <option>Landing Page</option>
+                    <option>Website Redesign</option>
+                    <option>SEO and Launch Setup</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  Budget
+                  <select name="budget">
+                    <option value="">Select budget</option>
+                    <option>Under 500 EUR</option>
+                    <option>500 to 1,500 EUR</option>
+                    <option>1,500 to 3,000 EUR</option>
+                    <option>3,000+ EUR</option>
+                  </select>
+                </label>
+                <label>
+                  Timeline
+                  <input type="text" name="timeline" placeholder="Example: within 2 weeks">
+                </label>
+              </div>
+              <label>
+                Project Details
+                <textarea name="message" placeholder="Tell me what you want to build, who it is for, and what result you want." required></textarea>
+              </label>
+              <button class="btn primary" type="submit">Send Enquiry</button>
+              <div class="form-note">
+                Tip: after connecting your custom domain, update the SEO title and description again with your exact service area and strongest offer.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="whatsapp" onclick="whatsapp()" aria-label="Contact on WhatsApp">💬</button>
+
+    <footer>
+      <p>© 2026 ADS Studio. White and sand websites designed to convert.</p>
+    </footer>
+  </div>
+
+  <script>
+    function contact() {
+      window.location.href = "mailto:alaaobaid182@gmail.com";
+    }
+
+    function whatsapp() {
+      window.open("https://wa.me/4917623997210?text=Hello%20I%20want%20a%20website", "_blank");
+    }
+
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
+
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transitionDelay = `${Math.min(index * 50, 240)}ms`;
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.16
+      }
+    );
+
+    revealItems.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
